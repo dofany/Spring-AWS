@@ -1,5 +1,6 @@
 package com.dofany.dofanyhomepage.domain.posts;
 
+import com.dofany.dofanyhomepage.domain.BaseTimeEntity;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -9,7 +10,7 @@ import javax.persistence.*;
 @Getter
 @NoArgsConstructor
 @Entity
-public class Posts {
+public class Posts extends BaseTimeEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -33,5 +34,4 @@ public class Posts {
         this.title = title;
         this.content = content;
     }
-
 }
